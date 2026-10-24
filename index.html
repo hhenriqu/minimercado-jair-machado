@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimercado Jair Machado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Minimercado <span>Jair Machado</span></h1>
+    <nav>
+      <a href="caixa.html">Caixa</a>
+      <a href="estoque.html">Estoque</a>
+      <a href="financeiro.html">Financeiro</a>
+    </nav>
+    <div class="saldo-topo" id="saldo-topo">Saldo: R$ 0,00</div>
+  </header>
+
+  <main>
+    <section class="cartao">
+      <h2>Bem-vinda ao sistema do Seu Jair!</h2>
+      <p>O mercadinho funciona num ciclo. O dinheiro do <strong>Financeiro</strong> paga a mercadoria,
+        que entra no <strong>Estoque</strong>, que é vendida no <strong>Caixa</strong>, e o dinheiro da
+        venda volta para o Financeiro.</p>
+      <p>As telas já estão prontas, mas o cérebro do sistema ainda não. Ele mora no arquivo
+        <code>js/logica.js</code>, e quem vai programar é você.</p>
+    </section>
+
+    <section class="resumo">
+      <a class="cartao" href="financeiro.html"><p>1. Financeiro</p><strong>Quanto dinheiro tem?</strong></a>
+      <a class="cartao" href="estoque.html"><p>2. Estoque</p><strong>Comprar mercadoria</strong></a>
+      <a class="cartao" href="caixa.html"><p>3. Caixa</p><strong>Vender para o cliente</strong></a>
+      <a class="cartao" href="testes.html"><p>Conferir</p><strong>Testes da lógica</strong></a>
+    </section>
+  </main>
+
+  <footer>Hackathon de lógica · Helio e Leticia</footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/logica.js"></script>
+  <script>atualizarSaldoTopo();</script>
+</body>
+</html>

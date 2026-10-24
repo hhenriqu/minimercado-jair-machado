@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Financeiro | Minimercado Jair Machado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Minimercado <span>Jair Machado</span></h1>
+    <nav>
+      <a href="caixa.html">Caixa</a>
+      <a href="estoque.html">Estoque</a>
+      <a href="financeiro.html" class="ativo">Financeiro</a>
+    </nav>
+    <div class="saldo-topo" id="saldo-topo">Saldo: R$ 0,00</div>
+  </header>
+  <main>
+    <section class="resumo">
+      <div class="cartao"><p>Saldo atual</p><strong id="saldo">R$ 0,00</strong></div>
+      <div class="cartao"><p>Total de entradas</p><strong class="entrada" id="entradas">R$ 0,00</strong></div>
+      <div class="cartao"><p>Total de saídas</p><strong class="saida" id="saidas">R$ 0,00</strong></div>
+    </section>
+
+    <section class="cartao">
+      <h2>Lançar movimentação manual</h2>
+      <form id="form-movimentacao" class="colunas">
+        <label>Tipo
+          <select id="tipo">
+            <option value="entrada">Entrada (dinheiro chegou)</option>
+            <option value="saida">Saída (dinheiro foi embora)</option>
+          </select>
+        </label>
+        <label>Valor
+          <input type="number" id="valor" min="0" step="0.01" placeholder="Ex: 100">
+        </label>
+        <label style="grid-column: 1 / -1">Descrição
+          <input type="text" id="descricao" placeholder="Ex: Conta de luz">
+        </label>
+        <button type="submit">Lançar</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Extrato</h2>
+      <table>
+        <thead><tr><th>Data</th><th>Descrição</th><th class="numero">Valor</th></tr></thead>
+        <tbody id="extrato"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="mensagem"></div>
+  <footer>
+    <button class="secundario pequeno" onclick="resetarDados()">Voltar ao primeiro dia (apagar dados)</button>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/logica.js"></script>
+  <script src="js/financeiro.js"></script>
+</body>
+</html>

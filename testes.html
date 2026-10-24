@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testes | Minimercado Jair Machado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Minimercado <span>Jair Machado</span></h1>
+    <nav>
+      <a href="caixa.html">Caixa</a>
+      <a href="estoque.html">Estoque</a>
+      <a href="financeiro.html">Financeiro</a>
+      <a href="testes.html" class="ativo">Testes</a>
+    </nav>
+  </header>
+  <main>
+    <section class="cartao">
+      <h2>Testes da lógica</h2>
+      <p>Cada linha confere uma regra de <code>js/logica.js</code>. Programe até ficar tudo verde.
+        Os testes usam dados de mentirinha, então não mexem no mercado de verdade.</p>
+      <p><strong id="placar"></strong></p>
+      <table>
+        <thead><tr><th>Exercício</th><th>O que é conferido</th><th>Resultado</th></tr></thead>
+        <tbody id="resultados"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="js/dados.js"></script>
+  <script src="js/logica.js"></script>
+  <script src="js/testes.js"></script>
+</body>
+</html>

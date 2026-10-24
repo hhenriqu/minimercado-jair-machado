@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caixa | Minimercado Jair Machado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Minimercado <span>Jair Machado</span></h1>
+    <nav>
+      <a href="caixa.html" class="ativo">Caixa</a>
+      <a href="estoque.html">Estoque</a>
+      <a href="financeiro.html">Financeiro</a>
+    </nav>
+    <div class="saldo-topo" id="saldo-topo">Saldo: R$ 0,00</div>
+  </header>
+  <main class="colunas">
+    <section class="cartao">
+      <h2>Produtos</h2>
+      <p class="vazio">Clique num produto para colocar no carrinho.</p>
+      <div class="produtos-grade" id="produtos"></div>
+    </section>
+
+    <section class="cartao">
+      <h2>Carrinho</h2>
+      <table>
+        <thead>
+          <tr><th>Produto</th><th class="numero">Qtd</th><th class="numero">Subtotal</th><th></th></tr>
+        </thead>
+        <tbody id="carrinho"></tbody>
+      </table>
+      <div class="total">Total: <span id="total">R$ 0,00</span></div>
+      <form id="form-pagamento">
+        <label>Valor pago pelo cliente
+          <input type="number" id="valor-pago" min="0" step="0.01" placeholder="Ex: 50">
+        </label>
+        <p>Troco: <strong id="troco">-</strong></p>
+        <button type="submit">Finalizar venda</button>
+        <button type="button" class="secundario" id="limpar">Limpar carrinho</button>
+      </form>
+    </section>
+
+    <section class="cartao" style="grid-column: 1 / -1">
+      <h2>Últimas vendas</h2>
+      <table>
+        <thead><tr><th>Data</th><th>Itens</th><th class="numero">Total</th><th class="numero">Troco</th></tr></thead>
+        <tbody id="vendas"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="mensagem"></div>
+  <footer>
+    <button class="secundario pequeno" onclick="resetarDados()">Voltar ao primeiro dia (apagar dados)</button>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/logica.js"></script>
+  <script src="js/caixa.js"></script>
+</body>
+</html>

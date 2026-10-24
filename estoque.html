@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estoque | Minimercado Jair Machado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Minimercado <span>Jair Machado</span></h1>
+    <nav>
+      <a href="caixa.html">Caixa</a>
+      <a href="estoque.html" class="ativo">Estoque</a>
+      <a href="financeiro.html">Financeiro</a>
+    </nav>
+    <div class="saldo-topo" id="saldo-topo">Saldo: R$ 0,00</div>
+  </header>
+  <main>
+    <section class="cartao">
+      <h2>Repor estoque (comprar do fornecedor)</h2>
+      <form id="form-repor" class="colunas">
+        <label>Produto
+          <select id="produto-repor"></select>
+        </label>
+        <label>Quantidade
+          <input type="number" id="quantidade-repor" min="1" step="1" value="1">
+        </label>
+        <p>Custo da compra: <strong id="custo-compra">-</strong></p>
+        <button type="submit">Comprar e repor</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Produtos no estoque</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th><th class="numero">Custo</th><th class="numero">Preço de venda</th>
+            <th class="numero">Quantidade</th><th class="numero">Mínimo</th><th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="produtos"></tbody>
+      </table>
+    </section>
+
+    <section class="cartao">
+      <h2>Precisa repor</h2>
+      <ul id="abaixo-minimo"></ul>
+    </section>
+  </main>
+
+  <div id="mensagem"></div>
+  <footer>
+    <button class="secundario pequeno" onclick="resetarDados()">Voltar ao primeiro dia (apagar dados)</button>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/logica.js"></script>
+  <script src="js/estoque.js"></script>
+</body>
+</html>
