@@ -19,6 +19,8 @@ As telas estão prontas. A lógica do ciclo está em `js/logica.js`, com um `TOD
 
 ## Começando
 
+- **[Comece aqui](docs/COMECE-AQUI.md): primeira vez? Leia este primeiro.** Prepara o computador e
+  faz o primeiro exercício passo a passo.
 - [Exercícios](docs/EXERCICIOS.md): o que programar, em que ordem.
 - [Git, PR e Vercel](docs/GIT.md): como mandar cada mudança para o site no ar.
 - `testes.html`: confere a lógica. A meta é ficar tudo verde.
